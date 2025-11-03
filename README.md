@@ -135,38 +135,59 @@ Por cada corrección o defecto en el HTML+CSS+Js se descontará un 5% del 85%.
 
 ## Requisitos del Segundo Parcial
 
+### Sobre Readme.md
+- [ ] Actualizar el readme.md para incluir pasos de ejecución del proyecto: (2026)
+- [ ] Actuaizar tecnologías usadas (2026)
+```
+1. cd frontend
+2. npm install
+3. npm run dev
+4. npx json-server --watch src/data/db.json --port 4000
+```
+
 ### Sobre React
 - [ ] Se debe emplear **Vite** para instalar **React**
-- [ ] Se debe emplear **Hooks**, useState, useEffect, useContext, useNavigate
+- [ ] Se debe emplear **Hooks**, useState, useEffect, useNavigate
 - [ ] Se debe emplear **react-router-dom** para el enrutamiento a otras páginas
 - [ ] Se debe emplear **outlet** para que un componente principal renderice componentes de rutas hijas.
-- [ ] La estructura del proyecto (carpetas) debe ser el correcto: components, pages, styles
+- [ ] La estructura del proyecto (carpetas) debe ser el correcto: components, pages, styles, api
 - [ ] Los **imports** deben ser usando con **alias**
+- [ ] Emplear al menos una imagen en **/public** y una en **assets**
 - [ ] Validaciones en tiempo real con onChange + mensajes de error accesibles.
-- [ ] Crear al menos un componente genérico (ej: Button, Card, Input) y reutilizarlo en varias páginas.
+- [ ] Crear al menos un componente genérico (ej: Button, Card, Input, Header, Footer) y reutilizarlo en varias páginas.
 - [ ] Guardar algún dato en localStorage (ej: preferencias de tema o un carrito de compras).
-- [ ] En caso de tener backend, emplear **fetch**
+- [ ] Emplear mock de al menos un servicio y permitir al menos una de estas acciones: get/read, post/add, patch/update, delete
+- [ ] Emplear fetch y funciones **async/await** (en lugar del .then)
 - [ ] En caso de no contar con un servicio que nos provea la información necesaria, la misma debe ser leída en formato tipo Json local y renderizar listas dinámicas. Ejemplo:
 ````javascript
-const activities = [
-  {
-    nombre: "taekwondo",
-    descripcion: "Arte marcial coreana",
-    horarios: [
-      { dia: 2, "hora-inicio": "18:30", "hora-fin": "20:00" },
-      { dia: 4, "hora-inicio": "18:30", "hora-fin": "20:00" }
-    ]
-  },
-  {
-    nombre: "zumba",
-    descripcion: "ritmos latinos",
-    horarios: [
-      { dia: 1, "hora-inicio": "19:30", "hora-fin": "20:30" },
-      { dia: 3, "hora-inicio": "19:30", "hora-fin": "20:30" }
+"productos": [
+    {
+      "id": 1,
+      "nombre": "Cabezal Sparring",
+      "description": "Cabezal de Sparring.",
+      "categoria": "Protectores",
+      "marca": "Gran Marc",
+      "precio": 35000,
+      "imagen": "cabezal-cerrado.webp"
+    },
+    {
+      "id": 2,
+      "nombre": "Dobok Dan",
+      "description": "Bobok aprobado para torneos internacionales.",
+      "categoria": "Dobok",
+      "marca": "Daedo",
+      "precio": 115000.345,
+      "imagen": "dobok.webp"
+    }
     ]
   }
 ];
 ````
+
+### Sobre SASS
+- [ ] Todos los archivos de estilos deben encontrarse dentro de la carpeta styles
+- [ ] El import de los estilos debe realizarse empleando alias
+- [ ] Todos los estilos deben ser aplicados en archivos .scss
 
 ### Sobre las Correcciones
 - [ ] Todas las correcciones y mejoras (sugerencias) solicitadas durante el primer parcial deben estar corregidas.
@@ -175,20 +196,19 @@ const activities = [
 - [ ] Las notas serán de la siguiente manera: (Por ejemplo 55% 4; 59% 5; 67% 6; 75% 7; 82% 8; 89% 9; 97% 10)
 - Las sugerencias sobre el HTML, CSS y Js realizadas en el anterior parcial dejen ser corregidas.
 
-| Items a Evaluar                          | %   |
-|------------------------------------------|-----|
-| Estructura del Proyecto                  | 10% |
-| Navegación con react-router-dom          | 15% |
-| Uso correcto de Hooks                    | 20% |
-| Renderizado dinámico de datos            | 25% |
-| Validaciones y mensajes de error         | 10% |
-| Consistencia del diseño y uso de estilos | 10% |
-| Código limpio y sin errores en consola   | 10% |
+| Items a Evaluar                          |
+|------------------------------------------|
+| Estructura del Proyecto                  |
+| Navegación con react-router-dom          |
+| Uso correcto de Hooks                    |
+| Renderizado dinámico de datos            |
+| Validaciones y mensajes de error         |
+| Consistencia del diseño y uso de estilos |
+| Código limpio y sin errores en consola   |
 
 ## Requisitos del FINAL
 - [ ] Todas las correcciones y mejoras solicitadas durante el primer y segundo parcial deben estar corregidas.
 - [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
-- [ ] No debe haber errores JavaScript presentes (F12 > Consola)
+- [ ] No debe haber errores JavaScript presentes al usar el sitio (F12 > Consola)
 - [ ] Debe cumplir con TODOS los requisitos del 1er y 2do Parcial (si se agrego código nuevo en Js, se debe documentar, si hay nuevos inputs de html deben contener su label, etc)
-- [ ] El proyecto debe visualizarse correctamente en Desktop y Mobile
-- [ ] Incluir al menos 5 tests con Jest + React Testing Library (ejemplo: que un botón renderice un texto esperado).
+- [ ] El proyecto debe visualizarse correctamente en Desktop
